@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employees</title>
+</head>
+<body>
+
+    <h1>All Employees</h1>
+    <a href="/employees/new">
+
+    <button>Add Employee</button>
+
+</a>
+
+<br><br>
+
+    <% for(let emp of employees) { %>
+
+        <div>
+
+            <h3><%= emp.name %></h3>
+
+            <p><%= emp.role %></p>
+
+            <form method="POST" action="/employees/<%= emp.id %>?_method=DELETE">
+
+                <button>Delete</button>
+
+            </form>
+
+            <hr>
+
+        </div>
+
+    <% } %>
+
+</body>
+</html>

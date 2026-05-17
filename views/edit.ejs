@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Employee</title>
+</head>
+<body>
+
+    <h1>Edit Role</h1>
+
+    <form method="POST" action="/employees/<%= employee.id %>?_method=PATCH">
+
+        <input type="text" name="role" value="<%= employee.role %>">
+
+        <button>Update</button>
+
+    </form>
+
+</body>
+</html>
